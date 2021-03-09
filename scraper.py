@@ -27,6 +27,7 @@ f = open("results.txt", "w")
 f.write("Pharma Companies News and Releases for Today\n")
 
 for url in currentline:
+    print('Processing URL:', url)  
     page = requests.get(url)
     soup = BeautifulSoup(page.content, 'html.parser')
     # Make the BS requests first to get the data
